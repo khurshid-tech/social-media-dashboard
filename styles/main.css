@@ -1,0 +1,162 @@
+:root {
+    --whiteBg: hsl(0, 0%, 100%);
+    --whiteText: hsl(0, 0%, 100%);
+    --veryDarkBlueBg: hsl(230, 17%, 14%);
+    --Facebook: hsl(208, 92%, 53%);
+    --Twitter: hsl(203, 89%, 53%);
+    --Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+    --YouTube: hsl(348, 97%, 39%);
+    --DarkGrayishBlueText: hsl(228, 12%, 44%)
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    /* background-color: var(--veryDarkBlueBg); */
+}
+
+.wrapper {
+    min-height: 100vh;
+    background-color: var(--veryDarkBlueBg);
+    color: var(--whiteText);
+}
+
+
+.header h2 {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.header p {
+    color: var(--DarkGrayishBlueText);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.header .left {
+    border-bottom: 1px solid var(--DarkGrayishBlueText);
+}
+
+.header .right span {
+    color: var(--DarkGrayishBlueText);
+}
+
+.social-media-cards .card .upper-border {
+    height: 2px;
+    width: 100%;
+}
+
+.social-media-cards .card .upper-border.facebook {
+    background-color: hsl(208, 92%, 53%);
+}
+.social-media-cards .card .upper-border.twitter {
+    background-color: hsl(203, 89%, 53%);
+}
+.social-media-cards .card .upper-border.instagram {
+    background: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+.social-media-cards .card .upper-border.youtube {
+    background-color: hsl(348, 97%, 39%);
+}
+
+
+.social-media-cards .card {
+    background-color: hsl(228, 28%, 20%);
+    overflow: hidden;
+}
+
+.social-media-cards .card .social-icons img {
+    width: 14px;
+}
+
+.social-media-cards .card .social-icons .username {
+    font-size: 0.6rem;
+    color: var(--DarkGrayishBlueText);
+    margin-left: 0.25rem;
+}
+
+.social-media-cards .card .followers .numbers {
+    font-size: 2rem;
+} 
+
+.social-media-cards .card .followers .follower {
+    margin-top: -10px;
+    letter-spacing: 3px;
+    font-size: 0.6rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--DarkGrayishBlueText);
+} 
+
+.social-media-cards .card .today-stats {
+    font-size: 0.6rem;
+    margin-bottom: 1rem;
+    color: var(--DarkGrayishBlueText);
+}
+
+.overview-section h2 {
+    font-size: 1rem;
+}
+
+.overview-section .card {
+    background-color: hsl(228, 28%, 20%);
+    overflow: hidden;
+}
+
+.overview-section .card .page-views .title {
+    font-size: 0.7rem;
+    color: var(--DarkGrayishBlueText);
+}
+
+.overview-section .card .page-views span:last-child {
+    font-size: 1.4rem;
+}
+
+@media (min-width: 992px) {
+    .wrapper .container {
+        width: 80%;
+    }
+
+    .social-media-cards .card {
+        width: 23.5%;
+    }
+
+    .header h2 {
+        font-size: 1.7rem;
+    }
+
+    .header .left {
+        border:none;
+    }
+
+    .social-media-cards .card .social-icons .username {
+        font-size: 0.7rem;
+    }
+
+    .social-media-cards .card .followers .numbers {
+        font-size: 3rem;
+    }
+
+    .social-media-cards .card .today-stats {
+        font-size: 0.7rem;
+    }
+
+    .overview-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .overview-section .card {
+        width: 23.5%;
+    }
+
+    .overview-section .card .page-views span:last-child {
+        font-size: 1.6rem;
+    }
+
+}
