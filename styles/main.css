@@ -2,9 +2,11 @@
     --whiteBg: hsl(0, 0%, 100%);
     --whiteText: hsl(0, 0%, 100%);
     --veryDarkBlueBg: hsl(230, 17%, 14%);
+    --topBgDark: hsl(232, 19%, 15%);
+    --topBgLight: hsl(225, 100%, 98%);
     --Facebook: hsl(208, 92%, 53%);
     --Twitter: hsl(203, 89%, 53%);
-    --Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+    --Instagram: linear gradient hsl(38, 21%, 20%) to hsl(329, 70%, 58%);
     --YouTube: hsl(348, 97%, 39%);
     --DarkGrayishBlueText: hsl(228, 12%, 44%)
 }
@@ -23,8 +25,27 @@ body {
 
 .wrapper {
     min-height: 100vh;
-    background-color: var(--veryDarkBlueBg);
+    transition: all .3s;
+}
+
+.wrapper.darkTheme {
+    background: var(--veryDarkBlueBg);
+    box-shadow: inset 0px 200px 0px var(--topBg);
     color: var(--whiteText);
+}
+
+.wrapper.darkTheme .card {
+    background-color: hsl(228, 28%, 20%);
+}
+
+.wrapper.lightTheme {
+    background: var(--whiteBg);
+    box-shadow: inset 0px 200px 0px var(--topBgLight);
+    color: black;
+}
+
+.wrapper.lightTheme .card {
+    background-color: hsl(227, 47%, 96%);
 }
 
 
@@ -116,6 +137,16 @@ body {
 
 .overview-section .card .page-views span:last-child {
     font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+    .social-media-cards .card {
+        width: 23%;
+    }
+
+    .overview-section .card {
+        width: 23%;
+    }
 }
 
 @media (min-width: 992px) {
